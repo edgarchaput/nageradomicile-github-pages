@@ -62,8 +62,49 @@
         <h1>APPRENEZ A NAGER</h1>
         <h2>DANS VOTRE PROPRE PISCINE</h2>
         <p>
-          <a href="#" class="btn btn-primary">Réserver un cours</a>
+          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#orderForm">
+            Réserver un cours
+          </button>
         </p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Réservez</h4>
+          </div> 
+          <div class="modal-body">
+            <div id="wufoo-zi660500xg6mrr">
+            Fill out my <a href="https://nageradomicile.wufoo.com/forms/zi660500xg6mrr">online form</a>.
+            </div>
+            <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">Use <a href="http://www.wufoo.com/partners/">Wufoo integrations</a> and get your data to your favorite apps.</div>
+            <script type="text/javascript">var zi660500xg6mrr;(function(d, t) {
+            var s = d.createElement(t), options = {
+            'userName':'nageradomicile',
+            'formHash':'zi660500xg6mrr',
+            'autoResize':true,
+            'height':'1142',
+            'async':true,
+            'host':'wufoo.com',
+            'header':'show',
+            'ssl':true};
+            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+            s.onload = s.onreadystatechange = function() {
+            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+            try { zi660500xg6mrr = new WufooForm();zi660500xg6mrr.initialize(options);zi660500xg6mrr.display(); } catch (e) {}};
+            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+            })(document, 'script');</script>
+
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
       </div>
     </div>
 
