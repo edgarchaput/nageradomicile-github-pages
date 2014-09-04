@@ -56,103 +56,35 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-
-    <div class="wrapper">
-      <div class="lead">
-        <h1>APPRENEZ A NAGER</h1>
-        <h2>DANS VOTRE PROPRE PISCINE</h2>
-        <p>
-          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#orderForm">
-            Réserver un cours
-          </button>
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="orderForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="myModalLabel">Reservation</h4>
-          </div> 
-          <div class="modal-body">
-            <div id="wufoo-zi660500xg6mrr">
-            Fill out my <a href="https://nageradomicile.wufoo.com/forms/zi660500xg6mrr">online form</a>.
-            </div>
-            <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">Use <a href="http://www.wufoo.com/partners/">Wufoo integrations</a> and get your data to your favorite apps.</div>
-            <script type="text/javascript">var zi660500xg6mrr;(function(d, t) {
-            var s = d.createElement(t), options = {
-            'userName':'nageradomicile',
-            'formHash':'zi660500xg6mrr',
-            'autoResize':true,
-            'height':'1142',
-            'async':true,
-            'host':'wufoo.com',
-            'header':'show',
-            'ssl':true};
-            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-            s.onload = s.onreadystatechange = function() {
-            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-            try { zi660500xg6mrr = new WufooForm();zi660500xg6mrr.initialize(options);zi660500xg6mrr.display(); } catch (e) {}};
-            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-            })(document, 'script');</script>
-
-          </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="vertical-spacer"></div>
-
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-sm-6 col-md-4 feature">
-          <img src="images/icon_12134/icon_12134.png" alt="Swimmer" width="96" class="icon">
-          <p>
-           Choisissez votre moniteur de natation 
-           parmi nos <strong>1000</strong> instructeurs disponibles à travers la France.
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4 feature">
-          <img src="images/icon_293/icon_293.png" alt="Home" width="96" class="icon">
-          <p>
-          Un de nos supers instructeurs fonce chez vous 
-          pour vous apprendre à nager dans <strong>votre propre piscine</strong>. 
-          </p>
-        </div>
-        <div class="col-sm-6 col-md-4 feature">
-          <img src="images/icon_40065/icon_40065.png" alt="Warrantly" width="96" class="icon">
-          <p>
-          Apprentissage de la nage <strong>garanti</strong> ! 
-          Sunsational s'engage à vous rembourser le cours si vous n'en êtes pas satisfait. 
-          </p>
-        </div>
-      </div>
-    </div>
-
     <div class="vertical-spacer"></div>
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 text-center">
-          <!-- Begin MailChimp Signup Form -->
-          <h2>Inscrivez-vous à la Newsletter</h2>
-          <div id="mc_embed_signup">
-            <form action="http://nageradomicile.us9.list-manage.com/subscribe/post?u=d37edc1be98515170143751f8&amp;id=f0d2996b55" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
-            
-              <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required>
+        <div class="col-sm-6">
+          <div id="map" style="width: 100%; height: 400px;"></div>
 
-              <input type="submit" value="Suivez-nous" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary"></div>
-            </form>
-          </div>
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
-<!--End mc_embed_signup-->
+          <script type="text/javascript">
+            var myOptions = {
+                zoom: 14,
+                center: new google.maps.LatLng(43.4269350, -1.5858500),
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                styles: [{"featureType":"water","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"landscape","stylers":[{"color":"#f2f2f2"}]},{"featureType":"road","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]}]
+            };
+
+            new google.maps.Map(document.getElementById('map'), myOptions);
+          </script>
+        </div>
+        <div class="col-sm-6">
+          <h1>Contact</h1>
+          <p>
+            <i class="fa fa-map-marker"></i> Maison Udaberri, rue Urdelarun - 64210 Bidart
+          </p>
+          <p>
+            <i class="fa fa-mobile"></i> 06 68 36 39 55
+          </p>
+
         </div>
       </div>
     </div>
